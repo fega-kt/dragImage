@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 420px;
+    justify-content: center;
+}
+.item{
+    width: 160px;
+    height: 160px;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+.item .imageDrag{
+    background-image: url('../image/aca55a7350d4948acdc5.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    border: none;
+
+}
+.item.hovered{
+    border: 2px dotted rgb(7, 175, 57);
+}
