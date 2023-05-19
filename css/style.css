@@ -76,7 +76,7 @@
 .card::after {
     content: "";
     position: absolute;
-    background: rgb(142, 190, 7);
+    background: linear-gradient(100deg, rgb(197, 12, 151), rgb(248, 244, 4));
     inset: 5px;
     border-radius: 15px;
 }
