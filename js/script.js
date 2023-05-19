@@ -1,13 +1,13 @@
 
 const listItem = document.querySelectorAll(".item");
 const image = document.querySelector(".imageDrag");
-console.log(listItem)
-let beforItem, afterItem
+let beforItem
 listItem.forEach(item => {
     item.addEventListener("dragover", (e) => {
         if (!beforItem) return
         e.preventDefault();
         item.classList.add('hovered')
+        item.classList.add('card')
     })
     item.addEventListener("drag", (e) => {
         beforItem = item.querySelector(".imageDrag");
@@ -18,6 +18,8 @@ listItem.forEach(item => {
         e.preventDefault();
         if (!beforItem) return
         item.classList.remove('hovered')
+        item.classList.remove('card')
+
     })
 
     item.addEventListener("drop", (e) => {
@@ -25,5 +27,7 @@ listItem.forEach(item => {
         e.preventDefault();
         item.append(image)
         item.classList.remove('hovered')
+        item.classList.remove('card')
+
     })
 });
